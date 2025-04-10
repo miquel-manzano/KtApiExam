@@ -1,0 +1,19 @@
+CREATE TABLE AbsentStudentsDB (
+SID INTEGER,
+DATE TEXT DEFAULT CURRENT_TIME
+);
+
+
+CREATE INDEX AbsentStudentsDB_index ON AbsentStudentsDB(SID);
+
+selectAll:
+SELECT * FROM AbsentStudentsDB;
+
+insertStudent:
+INSERT INTO AbsentStudentsDB (SID) VALUES (?);
+
+getNumStudentById:
+SELECT COUNT(SID) FROM AbsentStudentsDB WHERE SID = ? GROUP BY SID;
+
+deleteAbs:
+DELETE FROM AbsentStudentsDB WHERE SID = ?;

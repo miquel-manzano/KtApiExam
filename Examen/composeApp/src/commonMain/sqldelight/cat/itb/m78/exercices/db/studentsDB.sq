@@ -1,0 +1,14 @@
+CREATE TABLE studentsDB (
+ID INTEGER,
+StudentID INTEGER,
+DATE TEXT DEFAULT CURRENT_TIME
+);
+
+
+CREATE INDEX AbsentStudents_index ON studentsDB(ID);
+
+selectAll:
+SELECT * FROM studentsDB;
+
+insertStudent:
+INSERT INTO studentsDB (StudentID) VALUES (?);
